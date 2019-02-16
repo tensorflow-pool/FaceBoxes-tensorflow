@@ -35,8 +35,10 @@ class Detector:
             with tf.name_scope('image_padding'):
 
                 # image size must be divisible by 128
-                new_h = x * tf.to_int32(tf.ceil(h/x))
-                new_w = x * tf.to_int32(tf.ceil(w/x))
+                # new_h = x * tf.to_int32(tf.ceil(h/x))
+                # new_w = x * tf.to_int32(tf.ceil(w/x))
+                new_h = x * tf.to_int32(tf.ceil(tf.cast(h, tf.float32)/(x*1.0)))
+                new_w = x * tf.to_int32(tf.ceil(tf.cast(w, tf.float32)/(x*1.0)))
                 # also we will need to rescale bounding box coordinates
                 self.box_scaler = tf.to_float(tf.stack([
                     h/new_h, w/new_w, h/new_h, w/new_w

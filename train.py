@@ -50,7 +50,7 @@ run_config = run_config.replace(
     model_dir=model_params['model_dir'],
     session_config=config,
     save_summary_steps=200,
-    save_checkpoints_secs=600,
+    save_checkpoints_steps=3000,
     log_step_count_steps=100
 )
 
