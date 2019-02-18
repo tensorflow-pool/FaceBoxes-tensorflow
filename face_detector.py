@@ -27,7 +27,7 @@ class FaceDetector:
 
         gpu_options = tf.GPUOptions(
             per_process_gpu_memory_fraction=gpu_memory_fraction,
-            visible_device_list=visible_device_list
+            visible_device_list=visible_device_list,
         )
         config_proto = tf.ConfigProto(gpu_options=gpu_options, log_device_placement=False)
         self.sess = tf.Session(graph=graph, config=config_proto)

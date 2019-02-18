@@ -7,7 +7,7 @@ from model import model_fn
 
 
 CONFIG = 'config.json'
-OUTPUT_FOLDER = 'export/run00'
+OUTPUT_FOLDER = 'export/2-16'
 GPU_TO_USE = '0'
 
 WIDTH, HEIGHT = None, None

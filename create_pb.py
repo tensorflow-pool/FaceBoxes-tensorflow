@@ -7,10 +7,10 @@ import argparse
 def make_args():
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        '-s', '--saved_model_folder', type=str
+        '-s', '--saved_model_folder', type=str, default="export/2-16/1550458176"
     )
     parser.add_argument(
-        '-o', '--output_pb', type=str, default='model.pb'
+        '-o', '--output_pb', type=str, default='models/2-16/model.pb'
     )
     return parser.parse_args()
 
